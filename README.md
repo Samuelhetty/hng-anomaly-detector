@@ -215,20 +215,20 @@ sudo ufw enable
 ### 5. Start the Stack
 
 ```bash
-docker compose up -d
+sudo docker compose up -d
 ```
 
 ### 6. Verify
 
 ```bash
 # Check all containers are up
-docker compose ps
+sudo docker compose ps
 
 # Tail detector logs
-docker compose logs -f detector
+sudo docker compose logs -f detector
 
 # Check nginx is writing JSON logs
-docker compose exec nginx tail -f /var/log/nginx/hng-access.log
+sudo docker compose exec nginx tail -f /var/log/nginx/hng-access.log
 
 # View iptables (run on host)
 sudo iptables -L INPUT -n --line-numbers

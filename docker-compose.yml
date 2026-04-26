@@ -1,4 +1,3 @@
-version: "3.9"
 
 # HNG Anomaly Detection Engine — Docker Compose Stack
 #
@@ -86,10 +85,11 @@ services:
       - nextcloud
       - detector
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost/nginx-health"]
-      interval: 15s
-      timeout: 5s
+      test: ["CMD-SHELL", "nginx -t 2>/dev/null && pgrep nginx > /dev/null"]
+      interval: 30s
+      timeout: 10s
       retries: 3
+      start_period: 30s
 
   # Anomaly Detection Daemon
   detector:
@@ -109,11 +109,4 @@ services:
     environment:
       SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
       CONFIG_PATH: /app/config.yaml
-    cap_add:
-      # Required to run iptables commands
-      - NET_ADMIN
-      - NET_RAW
-    # Access host iptables (needed to block IPs at host level)
-    network_mode: "host"
-    # Override: when using host network, set ports via config only
-    # (comment out ports: above when using host network_mode)
+    privileged: true
