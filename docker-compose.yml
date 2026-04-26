@@ -60,9 +60,9 @@ services:
       MYSQL_HOST: db
       MYSQL_DATABASE: ${MYSQL_DATABASE:-nextcloud}
       MYSQL_USER: ${MYSQL_USER:-nextcloud}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-changeme_nc}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-mysecretpassword}
       NEXTCLOUD_ADMIN_USER: ${NEXTCLOUD_ADMIN_USER:-admin}
-      NEXTCLOUD_ADMIN_PASSWORD: ${NEXTCLOUD_ADMIN_PASSWORD:-changeme_admin}
+      NEXTCLOUD_ADMIN_PASSWORD: ${NEXTCLOUD_ADMIN_PASSWORD:-mysecretpassword}
       NEXTCLOUD_TRUSTED_DOMAINS: ${SERVER_IP:-localhost}
       OVERWRITEPROTOCOL: http
       OVERWRITEHOST: ${SERVER_IP:-localhost}
