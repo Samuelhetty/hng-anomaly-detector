@@ -325,3 +325,6 @@ Read the beginner-friendly walkthrough of how this was built:
 ```
 
 ## Author
+
+**Henrietta Onoge**
+GitHub: [https://github.com/Samuelhetty](https://github.com/Samuelhetty)
