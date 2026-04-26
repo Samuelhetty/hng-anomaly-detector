@@ -236,7 +236,7 @@ sudo iptables -L INPUT -n --line-numbers
 
 ### 7. Access the Dashboard
 
-Open `http://YOUR_SERVER_IP:8080` in a browser.
+Open `http://54.205.198.129:8080` in a browser.
 
 ---
 
