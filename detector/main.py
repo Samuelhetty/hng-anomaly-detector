@@ -1,7 +1,7 @@
 """
 HNG Anomaly Detection Engine — Daemon Entrypoint
 
-Wires together all components and runs the asyncio event loop forever.
+Wires together all components and runs the asyncio event loop.
 
 Startup sequence:
 1. Load config.yaml (resolve env vars)

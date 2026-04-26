@@ -416,7 +416,8 @@ function renderBans(bans) {
     <div class="ban-item">
       <div>
         <div class="ban-ip">${b.ip}</div>
-        <div class="ban-meta">${b.condition} · ban #${b.ban_count}</div>
+        <div class="ban-meta">${b.condition} · ban #${b.ban_count}
+        </div>
       </div>
       <div class="ban-duration ${b.duration_minutes===-1?'permanent':''}">
         ${fmtDuration(b.duration_minutes)}<br>

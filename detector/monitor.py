@@ -129,7 +129,7 @@ class LogMonitor:
                 if os.path.exists(self.log_path):
                     stat = os.stat(self.log_path)
                     if stat.st_ino != self._last_inode or stat.st_size < self._last_size:
-                        # File was rotated or truncated — re-open
+                        # File was truncated — re-open
                         await self._open_log()
                     self._last_size = stat.st_size
 

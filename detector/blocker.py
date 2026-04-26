@@ -196,7 +196,7 @@ class Blocker:
             return False
 
     async def _iptables_unban(self, ip: str):
-        """Remove the iptables DROP rule for the IP."""
+        """Remove the iptables DROP rule for the IP"""
         try:
             result = await asyncio.create_subprocess_exec(
                 "iptables", "-D", "INPUT",
